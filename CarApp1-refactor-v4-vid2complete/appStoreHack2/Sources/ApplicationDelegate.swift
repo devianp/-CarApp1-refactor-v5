@@ -17,5 +17,3 @@ extension ApplicationDelegate: UIApplicationDelegate {
         return true
     }
 }
-
-
