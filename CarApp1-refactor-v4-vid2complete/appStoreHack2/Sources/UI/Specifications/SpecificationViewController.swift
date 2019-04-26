@@ -3,24 +3,14 @@ import UIKit
 
 final class SpecificationViewController: UITableViewController {
 
-    struct Section {
-        let title: String
-        var rows: [Row]
-    }
-
-    struct Row {
-        let dataSource: SpecificationCell.DataSource
-    }
-
-    private let version: Version
-
-    private var sections: [Section] = [] {
+    private let version: API.VersionHead
+    private var specifications: [API.Specification] = [] {
         didSet {
             self.tableView.reloadData()
         }
     }
 
-    init(version: Version) {
+    init(version: API.VersionHead) {
         self.version = version
         super.init(style: .grouped)
         self.title = self.version.name
@@ -40,7 +30,6 @@ extension SpecificationViewController {
 
         let headerView = SpecificationHeaderView(frame: .zero)
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.version = self.version
 
         self.tableView.tableHeaderView = headerView
 
@@ -57,40 +46,41 @@ extension SpecificationViewController {
         self.tableView.backgroundView = backgroundView
 
         backgroundView.state = .loading
-        headerView.isHidden = true
-
-//        DataStore.shared.metrics(version: self.version) { [weak self] result in
-//            DispatchQueue.main.async {
-//                switch result {
-//                case .success(let metrics):
-//                    backgroundView.state = metrics.isEmpty ? .empty("Empty") : .loaded
-//                    headerView.isHidden = false
-//                    self?.sections = .init(metrics: metrics)
-//                case.failure(let error):
-//                    backgroundView.state = .error(error)
-//                }
-//            }
-//        }
+        API.shared.version(id: self.version.id) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let version):
+                    backgroundView.state = version.specifications.isEmpty ? .empty(nil) : .loaded
+                    headerView.image = UIImage(named: "2") // version.imageURL
+                    headerView.text = version.summary
+                    headerView.layoutIfNeeded()
+                    self?.tableView.tableHeaderView = headerView
+                    self?.specifications = version.specifications
+                case.failure(let error):
+                    backgroundView.state = .error(error)
+                }
+            }
+        }
     }
 }
 
 extension SpecificationViewController {  // UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.sections.count
+        return self.specifications.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sections[section].rows.count
+        return self.specifications[section].metrics.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpecificationCell", for: indexPath) as! SpecificationCell
-        cell.dataSource = self.sections[indexPath.section].rows[indexPath.row].dataSource
+        cell.dataSource = .init(metric: self.specifications[indexPath.section].metrics[indexPath.row])
         return cell
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.sections[section].title
+        return self.specifications[section].name
     }
 }

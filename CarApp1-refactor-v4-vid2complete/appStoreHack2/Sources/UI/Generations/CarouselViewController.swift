@@ -3,7 +3,7 @@ import UIKit
 
 final class CarouselViewController: UIViewController {
 
-    var generations: [Generation] = [] {
+    var generations: [API.GenerationHead] = [] {
         didSet {
             self.carouselView.pageControl.numberOfPages = self.generations.count
             self.carouselView.collectionView.reloadData()

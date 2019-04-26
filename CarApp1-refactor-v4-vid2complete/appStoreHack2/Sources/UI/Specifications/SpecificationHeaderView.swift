@@ -3,15 +3,26 @@ import UIKit
 
 final class SpecificationHeaderView: UIView {
 
-    var version: Version? {
-        didSet {
-            self.imageView.image = UIImage(named: "2")
-            self.nameLabel.text = self.version?.summary
+    var image: UIImage? {
+        get {
+            return self.imageView.image
+        }
+        set {
+            self.imageView.image = newValue
+        }
+    }
+
+    var text: String? {
+        get {
+            return self.textLabel.text
+        }
+        set {
+            self.textLabel.text = newValue
         }
     }
 
     private let imageView: UIImageView
-    private let nameLabel: UILabel
+    private let textLabel: UILabel
 
     override init(frame: CGRect) {
 
@@ -20,15 +31,15 @@ final class SpecificationHeaderView: UIView {
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.clipsToBounds = true
 
-        self.nameLabel = UILabel(frame: .zero)
-        self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.nameLabel.font = .preferredFont(forTextStyle: .body)
-        self.nameLabel.numberOfLines = 0
+        self.textLabel = UILabel(frame: .zero)
+        self.textLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.textLabel.font = .preferredFont(forTextStyle: .body)
+        self.textLabel.numberOfLines = 0
 
         super.init(frame: frame)
 
         self.addSubview(self.imageView)
-        self.addSubview(self.nameLabel)
+        self.addSubview(self.textLabel)
 
         NSLayoutConstraint.activate([
 
@@ -37,10 +48,10 @@ final class SpecificationHeaderView: UIView {
             self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 
-            self.nameLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 8.0),
-            self.nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15.0),
-            self.nameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15.0),
-            self.bottomAnchor.constraint(equalTo: self.nameLabel.bottomAnchor),
+            self.textLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 8.0),
+            self.textLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15.0),
+            self.textLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15.0),
+            self.bottomAnchor.constraint(equalTo: self.textLabel.bottomAnchor),
             ])
     }
 

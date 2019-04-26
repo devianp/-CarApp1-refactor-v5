@@ -2,7 +2,7 @@
 import UIKit
 
 extension GenerationCell.DataSource {
-    init(generation: Generation) {
+    init(generation: API.GenerationHead) {
         self.text = generation.name
     }
 }

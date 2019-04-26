@@ -8,23 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A7242CB822394D620051FF0C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7242CB722394D620051FF0C /* API.swift */; };
-		A728042B2238098A00A2ED98 /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728042A2238098A00A2ED98 /* Metric.swift */; };
 		A728042D223809F300A2ED98 /* GenerationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728042C223809F300A2ED98 /* GenerationCell.swift */; };
-		A72804342238165F00A2ED98 /* GenerationCarouselCell.DataSource+Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72804332238165F00A2ED98 /* GenerationCarouselCell.DataSource+Generation.swift */; };
-		A72804362238182600A2ED98 /* GenerationCell.DataSource+Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72804352238182600A2ED98 /* GenerationCell.DataSource+Generation.swift */; };
-		A7280438223818FD00A2ED98 /* ModelCell.DataSource+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7280437223818FD00A2ED98 /* ModelCell.DataSource+Version.swift */; };
-		A728043A22381A2800A2ED98 /* SpecificationCell.DataSource+Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728043922381A2800A2ED98 /* SpecificationCell.DataSource+Metric.swift */; };
-		A728043C22381D6500A2ED98 /* ModelViewController.Sections+Versions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728043B22381D6500A2ED98 /* ModelViewController.Sections+Versions.swift */; };
-		A728043E22381F4200A2ED98 /* SpecificationViewController.Sections+Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728043D22381F4200A2ED98 /* SpecificationViewController.Sections+Metrics.swift */; };
-		A73DC52021949771000C8F3B /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC51F21949771000C8F3B /* Specification.swift */; };
-		A73DC5222194977C000C8F3B /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73DC5212194977C000C8F3B /* Version.swift */; };
+		A72804342238165F00A2ED98 /* GenerationCarouselCell.DataSource+API.GenerationHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72804332238165F00A2ED98 /* GenerationCarouselCell.DataSource+API.GenerationHead.swift */; };
+		A72804362238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72804352238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift */; };
+		A7280438223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7280437223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift */; };
+		A728043A22381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728043922381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift */; };
 		A7C5F6331F7D30D500810EB8 /* ModelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6321F7D30D500810EB8 /* ModelHeaderView.swift */; };
 		A7C5F6391F7D317600810EB8 /* GenerationCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6381F7D317600810EB8 /* GenerationCarouselCell.swift */; };
-		A7C5F63D1F7D31CE00810EB8 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F63C1F7D31CE00810EB8 /* Generation.swift */; };
 		B587570621A1682500891709 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587570521A1682500891709 /* ModelCell.swift */; };
 		B587570821A1750500891709 /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587570721A1750500891709 /* CarouselViewController.swift */; };
 		B587570A21A1754500891709 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587570921A1754500891709 /* CarouselView.swift */; };
-		B587571021A3400000891709 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587570F21A3400000891709 /* Result.swift */; };
 		B587571221A368F100891709 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587571121A368F100891709 /* StateView.swift */; };
 		B587571421AB158A00891709 /* SpecificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587571321AB158A00891709 /* SpecificationViewController.swift */; };
 		B587571621AFCDA800891709 /* SpecificationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587571521AFCDA800891709 /* SpecificationHeaderView.swift */; };
@@ -39,23 +32,16 @@
 
 /* Begin PBXFileReference section */
 		A7242CB722394D620051FF0C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		A728042A2238098A00A2ED98 /* Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
 		A728042C223809F300A2ED98 /* GenerationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCell.swift; sourceTree = "<group>"; };
-		A72804332238165F00A2ED98 /* GenerationCarouselCell.DataSource+Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerationCarouselCell.DataSource+Generation.swift"; sourceTree = "<group>"; };
-		A72804352238182600A2ED98 /* GenerationCell.DataSource+Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerationCell.DataSource+Generation.swift"; sourceTree = "<group>"; };
-		A7280437223818FD00A2ED98 /* ModelCell.DataSource+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelCell.DataSource+Version.swift"; sourceTree = "<group>"; };
-		A728043922381A2800A2ED98 /* SpecificationCell.DataSource+Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificationCell.DataSource+Metric.swift"; sourceTree = "<group>"; };
-		A728043B22381D6500A2ED98 /* ModelViewController.Sections+Versions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelViewController.Sections+Versions.swift"; sourceTree = "<group>"; };
-		A728043D22381F4200A2ED98 /* SpecificationViewController.Sections+Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificationViewController.Sections+Metrics.swift"; sourceTree = "<group>"; };
-		A73DC51F21949771000C8F3B /* Specification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specification.swift; sourceTree = "<group>"; };
-		A73DC5212194977C000C8F3B /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		A72804332238165F00A2ED98 /* GenerationCarouselCell.DataSource+API.GenerationHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerationCarouselCell.DataSource+API.GenerationHead.swift"; sourceTree = "<group>"; };
+		A72804352238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerationCell.DataSource+API.GenerationHead.swift"; sourceTree = "<group>"; };
+		A7280437223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelCell.DataSource+API.VersionHead.swift"; sourceTree = "<group>"; };
+		A728043922381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificationCell.DataSource+API.Metric.swift"; sourceTree = "<group>"; };
 		A7C5F6321F7D30D500810EB8 /* ModelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHeaderView.swift; sourceTree = "<group>"; };
 		A7C5F6381F7D317600810EB8 /* GenerationCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCarouselCell.swift; sourceTree = "<group>"; };
-		A7C5F63C1F7D31CE00810EB8 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
 		B587570521A1682500891709 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
 		B587570721A1750500891709 /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		B587570921A1754500891709 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		B587570F21A3400000891709 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B587571121A368F100891709 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		B587571321AB158A00891709 /* SpecificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationViewController.swift; sourceTree = "<group>"; };
 		B587571521AFCDA800891709 /* SpecificationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationHeaderView.swift; sourceTree = "<group>"; };
@@ -85,20 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				A7242CB722394D620051FF0C /* API.swift */,
-				A7C5F63C1F7D31CE00810EB8 /* Generation.swift */,
-				A728042A2238098A00A2ED98 /* Metric.swift */,
-				A73DC51F21949771000C8F3B /* Specification.swift */,
-				A73DC5212194977C000C8F3B /* Version.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		A7280424223808D700A2ED98 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				B587570F21A3400000891709 /* Result.swift */,
-			);
-			path = Support;
 			sourceTree = "<group>";
 		};
 		A7280425223808EB00A2ED98 /* UI */ = {
@@ -148,12 +122,10 @@
 		A72804302238115900A2ED98 /* Data+UI */ = {
 			isa = PBXGroup;
 			children = (
-				A72804332238165F00A2ED98 /* GenerationCarouselCell.DataSource+Generation.swift */,
-				A72804352238182600A2ED98 /* GenerationCell.DataSource+Generation.swift */,
-				A7280437223818FD00A2ED98 /* ModelCell.DataSource+Version.swift */,
-				A728043B22381D6500A2ED98 /* ModelViewController.Sections+Versions.swift */,
-				A728043922381A2800A2ED98 /* SpecificationCell.DataSource+Metric.swift */,
-				A728043D22381F4200A2ED98 /* SpecificationViewController.Sections+Metrics.swift */,
+				A72804332238165F00A2ED98 /* GenerationCarouselCell.DataSource+API.GenerationHead.swift */,
+				A72804352238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift */,
+				A7280437223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift */,
+				A728043922381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift */,
 			);
 			path = "Data+UI";
 			sourceTree = "<group>";
@@ -164,7 +136,6 @@
 				D7AF78731EC6623C003384EC /* ApplicationDelegate.swift */,
 				A7280423223808C600A2ED98 /* Data */,
 				A72804302238115900A2ED98 /* Data+UI */,
-				A7280424223808D700A2ED98 /* Support */,
 				A7280425223808EB00A2ED98 /* UI */,
 			);
 			path = Sources;
@@ -224,20 +195,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Devian Patel";
 				TargetAttributes = {
 					D7AF786F1EC6623C003384EC = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = EJJ2N9853E;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = D7AF786B1EC6623C003384EC /* Build configuration list for PBXProject "appStoreHack2" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -273,27 +244,20 @@
 				B587571621AFCDA800891709 /* SpecificationHeaderView.swift in Sources */,
 				B587571421AB158A00891709 /* SpecificationViewController.swift in Sources */,
 				D7AF78761EC6623C003384EC /* GenerationsViewController.swift in Sources */,
-				A728043C22381D6500A2ED98 /* ModelViewController.Sections+Versions.swift in Sources */,
 				B587570621A1682500891709 /* ModelCell.swift in Sources */,
 				B587570821A1750500891709 /* CarouselViewController.swift in Sources */,
 				A7C5F6331F7D30D500810EB8 /* ModelHeaderView.swift in Sources */,
 				B587570A21A1754500891709 /* CarouselView.swift in Sources */,
-				A728042B2238098A00A2ED98 /* Metric.swift in Sources */,
 				D7AF78741EC6623C003384EC /* ApplicationDelegate.swift in Sources */,
-				A7280438223818FD00A2ED98 /* ModelCell.DataSource+Version.swift in Sources */,
-				A72804362238182600A2ED98 /* GenerationCell.DataSource+Generation.swift in Sources */,
+				A7280438223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift in Sources */,
+				A72804362238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift in Sources */,
 				D7C2C6DB1ECCE924001761BC /* CarouselViewCell.swift in Sources */,
 				A7242CB822394D620051FF0C /* API.swift in Sources */,
-				A728043A22381A2800A2ED98 /* SpecificationCell.DataSource+Metric.swift in Sources */,
-				A73DC52021949771000C8F3B /* Specification.swift in Sources */,
-				A7C5F63D1F7D31CE00810EB8 /* Generation.swift in Sources */,
+				A728043A22381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift in Sources */,
 				A728042D223809F300A2ED98 /* GenerationCell.swift in Sources */,
-				B587571021A3400000891709 /* Result.swift in Sources */,
 				D710D9961ED1FBE700A71E25 /* ModelViewController.swift in Sources */,
-				A72804342238165F00A2ED98 /* GenerationCarouselCell.DataSource+Generation.swift in Sources */,
+				A72804342238165F00A2ED98 /* GenerationCarouselCell.DataSource+API.GenerationHead.swift in Sources */,
 				B587571821CD988300891709 /* SpecificationCell.swift in Sources */,
-				A73DC5222194977C000C8F3B /* Version.swift in Sources */,
-				A728043E22381F4200A2ED98 /* SpecificationViewController.Sections+Metrics.swift in Sources */,
 				A7C5F6391F7D317600810EB8 /* GenerationCarouselCell.swift in Sources */,
 				B587571221A368F100891709 /* StateView.swift in Sources */,
 			);
@@ -317,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -374,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -429,6 +395,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.appStoreHack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -441,6 +408,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.appStoreHack2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

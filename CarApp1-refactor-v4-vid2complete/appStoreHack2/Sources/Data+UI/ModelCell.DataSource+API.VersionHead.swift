@@ -1,6 +1,6 @@
 
 extension ModelCell.DataSource {
-    init(version: Version) {
+    init(version: API.VersionHead) {
         self.text = version.name
     }
 }

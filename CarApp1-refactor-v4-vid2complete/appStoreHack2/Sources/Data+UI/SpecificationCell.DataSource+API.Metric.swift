@@ -1,6 +1,6 @@
 
 extension SpecificationCell.DataSource {
-    init(metric: Metric) {
+    init(metric: API.Metric) {
         self.key = metric.key
         self.value = metric.value
     }

@@ -5,7 +5,7 @@ final class GenerationsViewController: UITableViewController {
 
     private let carouselViewController = CarouselViewController()
 
-    private var generations: [Generation] = [] {
+    private var generations: [API.GenerationHead] = [] {
         didSet {
             self.carouselViewController.generations = self.generations
             self.tableView?.reloadData()
@@ -39,9 +39,9 @@ extension GenerationsViewController { // UIViewController
         API.shared.generations { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let response):
-                    stateView.state = response.generations.isEmpty ? .empty("Empty") : .loaded
-                    self?.generations = response.generations
+                case .success(let generations):
+                    stateView.state = generations.isEmpty ? .empty("Empty") : .loaded
+                    self?.generations = generations
                 case.failure(let error):
                     stateView.state = .error(error)
                 }

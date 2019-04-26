@@ -3,25 +3,14 @@ import UIKit
 
 final class ModelViewController: UITableViewController {
 
-    struct Section {
-        let title: String
-        var rows: [Row]
-    }
-
-    struct Row {
-        let version: Version
-        let dataSource: ModelCell.DataSource
-    }
-
-    private let generation: Generation
-
-    private var sections: [Section] = [] {
+    private let generation: API.GenerationHead
+    private var models: [API.Model] = [] {
         didSet {
             self.tableView.reloadData()
         }
     }
 
-    init(generation: Generation) {
+    init(generation: API.GenerationHead) {
         self.generation = generation
         super.init(style: .grouped)
         self.title = self.generation.name
@@ -62,11 +51,11 @@ extension ModelViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let response):
-                    backgroundView.state = response.versions.isEmpty ? .empty(nil) : .loaded
-                    headerView.text = response.summary
+                    backgroundView.state = response.generation.models.isEmpty ? .empty(nil) : .loaded
+                    headerView.text = response.generation.summary
                     headerView.layoutIfNeeded()
                     self?.tableView.tableHeaderView = headerView
-                    self?.sections = .init(versions: response.versions)
+                    self?.models = response.generation.models
                 case.failure(let error):
                     backgroundView.state = .error(error)
                 }
@@ -78,28 +67,28 @@ extension ModelViewController {
 extension ModelViewController {  // UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.sections.count
+        return self.models.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.sections[section].rows.count
+        return self.models[section].versions.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ModelCell", for: indexPath) as! ModelCell
-        cell.dataSource = self.sections[indexPath.section].rows[indexPath.row].dataSource
+        cell.dataSource = .init(version: self.models[indexPath.section].versions[indexPath.row])
         return cell
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.sections[section].title
+        return self.models[section].name
     }
 }
 
 extension ModelViewController { // UITableViewDelegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let version = self.sections[indexPath.section].rows[indexPath.row].version
+        let version = self.models[indexPath.section].versions[indexPath.row]
         let viewController = SpecificationViewController(version: version)
         self.navigationController!.pushViewController(viewController, animated: true)
     }
