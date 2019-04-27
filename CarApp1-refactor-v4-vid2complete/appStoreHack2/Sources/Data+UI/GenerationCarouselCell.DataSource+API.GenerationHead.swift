@@ -3,7 +3,7 @@ import UIKit
 
 extension GenerationCarouselCell.DataSource {
     init(generation: API.GenerationHead) {
-        self.image = UIImage(named: "2")
+        self.urlImage = URLImage(url: generation.imageURL)
         self.text = generation.name
     }
 }

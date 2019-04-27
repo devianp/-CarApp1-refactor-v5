@@ -51,7 +51,7 @@ extension SpecificationViewController {
                 switch result {
                 case .success(let version):
                     backgroundView.state = version.specifications.isEmpty ? .empty(nil) : .loaded
-                    headerView.image = UIImage(named: "2") // version.imageURL
+                    headerView.urlImage = URLImage(url: version.imageURL)
                     headerView.text = version.summary
                     headerView.layoutIfNeeded()
                     self?.tableView.tableHeaderView = headerView

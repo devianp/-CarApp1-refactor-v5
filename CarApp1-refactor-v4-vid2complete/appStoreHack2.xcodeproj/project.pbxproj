@@ -13,6 +13,10 @@
 		A72804362238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72804352238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift */; };
 		A7280438223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7280437223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift */; };
 		A728043A22381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = A728043922381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift */; };
+		A788CE0722749989002631B9 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788CE0622749989002631B9 /* URLImageView.swift */; };
+		A788CE0922749D69002631B9 /* URLImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788CE0822749D69002631B9 /* URLImageCache.swift */; };
+		A788CE0B22749F19002631B9 /* URLDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788CE0A22749F19002631B9 /* URLDataCache.swift */; };
+		A788CE102274A535002631B9 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788CE0F2274A535002631B9 /* URLImage.swift */; };
 		A7C5F6331F7D30D500810EB8 /* ModelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6321F7D30D500810EB8 /* ModelHeaderView.swift */; };
 		A7C5F6391F7D317600810EB8 /* GenerationCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5F6381F7D317600810EB8 /* GenerationCarouselCell.swift */; };
 		B587570621A1682500891709 /* ModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B587570521A1682500891709 /* ModelCell.swift */; };
@@ -37,6 +41,10 @@
 		A72804352238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GenerationCell.DataSource+API.GenerationHead.swift"; sourceTree = "<group>"; };
 		A7280437223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelCell.DataSource+API.VersionHead.swift"; sourceTree = "<group>"; };
 		A728043922381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpecificationCell.DataSource+API.Metric.swift"; sourceTree = "<group>"; };
+		A788CE0622749989002631B9 /* URLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
+		A788CE0822749D69002631B9 /* URLImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageCache.swift; sourceTree = "<group>"; };
+		A788CE0A22749F19002631B9 /* URLDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDataCache.swift; sourceTree = "<group>"; };
+		A788CE0F2274A535002631B9 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		A7C5F6321F7D30D500810EB8 /* ModelHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHeaderView.swift; sourceTree = "<group>"; };
 		A7C5F6381F7D317600810EB8 /* GenerationCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationCarouselCell.swift; sourceTree = "<group>"; };
 		B587570521A1682500891709 /* ModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCell.swift; sourceTree = "<group>"; };
@@ -71,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				A7242CB722394D620051FF0C /* API.swift */,
+				A788CE0A22749F19002631B9 /* URLDataCache.swift */,
+				A788CE0822749D69002631B9 /* URLImageCache.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -82,6 +92,7 @@
 				A72804282238094B00A2ED98 /* Models */,
 				A72804292238095100A2ED98 /* Specifications */,
 				B587571121A368F100891709 /* StateView.swift */,
+				A788CE0622749989002631B9 /* URLImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 				A72804352238182600A2ED98 /* GenerationCell.DataSource+API.GenerationHead.swift */,
 				A7280437223818FD00A2ED98 /* ModelCell.DataSource+API.VersionHead.swift */,
 				A728043922381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift */,
+				A788CE0F2274A535002631B9 /* URLImage.swift */,
 			);
 			path = "Data+UI";
 			sourceTree = "<group>";
@@ -243,6 +255,7 @@
 			files = (
 				B587571621AFCDA800891709 /* SpecificationHeaderView.swift in Sources */,
 				B587571421AB158A00891709 /* SpecificationViewController.swift in Sources */,
+				A788CE102274A535002631B9 /* URLImage.swift in Sources */,
 				D7AF78761EC6623C003384EC /* GenerationsViewController.swift in Sources */,
 				B587570621A1682500891709 /* ModelCell.swift in Sources */,
 				B587570821A1750500891709 /* CarouselViewController.swift in Sources */,
@@ -255,10 +268,13 @@
 				A7242CB822394D620051FF0C /* API.swift in Sources */,
 				A728043A22381A2800A2ED98 /* SpecificationCell.DataSource+API.Metric.swift in Sources */,
 				A728042D223809F300A2ED98 /* GenerationCell.swift in Sources */,
+				A788CE0B22749F19002631B9 /* URLDataCache.swift in Sources */,
 				D710D9961ED1FBE700A71E25 /* ModelViewController.swift in Sources */,
 				A72804342238165F00A2ED98 /* GenerationCarouselCell.DataSource+API.GenerationHead.swift in Sources */,
 				B587571821CD988300891709 /* SpecificationCell.swift in Sources */,
 				A7C5F6391F7D317600810EB8 /* GenerationCarouselCell.swift in Sources */,
+				A788CE0922749D69002631B9 /* URLImageCache.swift in Sources */,
+				A788CE0722749989002631B9 /* URLImageView.swift in Sources */,
 				B587571221A368F100891709 /* StateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

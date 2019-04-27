@@ -4,23 +4,23 @@ import UIKit
 final class GenerationCarouselCell: UICollectionViewCell {
 
     struct DataSource {
-        let image: UIImage?
+        let urlImage: URLImage?
         let text: String?
     }
 
     var dataSource: DataSource? {
         didSet {
-            self.imageView.image = self.dataSource?.image
+            self.imageView.urlImage = self.dataSource?.urlImage
             self.textLabel.text = self.dataSource?.text
         }
     }
 
-    private let imageView: UIImageView
+    private let imageView: URLImageView
     private let textLabel: UILabel
 
     override init(frame: CGRect) {
 
-        self.imageView = UIImageView(frame: .zero)
+        self.imageView = URLImageView(frame: .zero)
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.clipsToBounds = true

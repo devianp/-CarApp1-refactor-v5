@@ -30,7 +30,7 @@ extension ModelViewController {
 
         let headerView = ModelHeaderView(frame: .zero)
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.image = UIImage(named: "2") // self.generation.imageURL
+        headerView.urlImage = URLImage(url: self.generation.imageURL)
 
         self.tableView.tableHeaderView = headerView
 

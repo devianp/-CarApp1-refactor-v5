@@ -3,12 +3,12 @@ import UIKit
 
 final class SpecificationHeaderView: UIView {
 
-    var image: UIImage? {
+    var urlImage: URLImage? {
         get {
-            return self.imageView.image
+            return self.imageView.urlImage
         }
         set {
-            self.imageView.image = newValue
+            self.imageView.urlImage = newValue
         }
     }
 
@@ -21,12 +21,12 @@ final class SpecificationHeaderView: UIView {
         }
     }
 
-    private let imageView: UIImageView
+    private let imageView: URLImageView
     private let textLabel: UILabel
 
     override init(frame: CGRect) {
 
-        self.imageView = UIImageView(frame: .zero)
+        self.imageView = URLImageView(frame: .zero)
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.clipsToBounds = true
