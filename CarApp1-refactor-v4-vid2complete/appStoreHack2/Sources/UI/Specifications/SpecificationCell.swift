@@ -26,4 +26,13 @@ final class SpecificationCell: UITableViewCell {
     required init?(coder _: NSCoder) {
         fatalError()
     }
+
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+        var size = super.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: horizontalFittingPriority, verticalFittingPriority: verticalFittingPriority)
+        let delta = self.detailTextLabel!.frame.height - self.textLabel!.frame.height
+        if delta > 0.0 {
+            size.height += delta
+        }
+        return size
+    }
 }
