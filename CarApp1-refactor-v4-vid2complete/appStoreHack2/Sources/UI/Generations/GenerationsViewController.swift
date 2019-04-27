@@ -14,7 +14,7 @@ final class GenerationsViewController: UITableViewController {
 
     init() {
         super.init(style: .grouped)
-        self.title = "Home"
+        self.title = NSLocalizedString("Home", comment: "")
         self.addChild(self.carouselViewController)
         self.carouselViewController.didMove(toParent: self)
     }
